@@ -1,0 +1,6 @@
+var events = require('events');
+var EM = new events.EventEmitter();
+for(var i=0;i<5;i++){
+  EM.on('a'+i,()=>console.log(i));
+}
+EM.emit('a'+3);
